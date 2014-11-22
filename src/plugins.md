@@ -1,6 +1,7 @@
-## プラグイン
+% プラグイン
 
-### カメラ操作
+###  Camera
+カメラ操作  
 
 #### Trackball
 視点を中心にマウスでアングルを動かせる、モデル鑑賞に適したコントローラーです。  
@@ -26,7 +27,8 @@
 <script src="libs/flyview/1.4/jThree.FlyView.js"></script>
 ```
 
-### モデルローダー
+### ObjLoader  
+モデルローダー  
 
 #### MMD
 MMDのモデル・モーションデータ読みこみが可能になります。  
@@ -81,7 +83,8 @@ Collada形式のモデルデータの読みこみが可能になります。
 <script src="libs/collada/1.0/jThree.Collada.js"></script>
 ```
 
-### エフェクト
+###  Effects
+エフェクト  
 
 #### ammo (物理演算)
 MMDモデルに物理演算を適用したい場合に読み込みます。  
@@ -136,7 +139,8 @@ jThree( "mesh" ).animate( { rotateY: "+=3.14" }, 15000, "easeInOutBack" );
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 ```
 
-### デバイス
+### Devices
+デバイス  
 
 #### RTC (webCamera)
 importタグ内のvideoタグにウェブカメラの動画を張り付けることが可能になります。  

@@ -1,4 +1,4 @@
-## GOML マニュアル
+% GOML マニュアル
 
 ### GOML overview
 jThreeで用いる、形状、物体を記述するためのファイル形式。  
@@ -6,13 +6,13 @@ jThreeで用いる、形状、物体を記述するためのファイル形式�
 
 ### Reference
 
-#### &lt;goml&gt;
+### &lt;goml&gt;
 GOMLの定義。  
 
-##### &lt;head&gt;
+### &lt;head&gt;
 最初に読み込む要素を記述します。
 		
-###### &lt;import&gt;
+#### &lt;import&gt;
 外部から読み込むHTML要素。  
 txrタグから参照するHTMLファイルを保持します。
 href属性にURLを指定するかHTMLのタグを直接記述することができます。  
@@ -35,16 +35,16 @@ var importHTML = jThree( "import" ).contents();
 </import>
 ````
 	
-###### &lt;geo&gt;
+#### &lt;geo&gt;
 形状定義。
 
-###### &lt;txr&gt;
+#### &lt;txr&gt;
 テクスチャ定義。
 
-###### &lt;mtl&gt;
+#### &lt;mtl&gt;
 材質定義。
 
-###### &lt;rdr&gt;
+#### &lt;rdr&gt;
 レンダラー定義。  
 描画するHTML要素と撮影に使うカメラを設定します。  
 frame属性にはHTML要素のCSSセレクタを入力してください(初期値はbody)。常にその要素のサイズに合わせて描画されます。  
@@ -59,11 +59,11 @@ param属性のantialiasでアンチエイリアスのtrue/falseを、clearColor�
 <rdr id="" frame="body" camera="camera:first" param="antialias: true; clearColor: #fff; clearAlpha: 0.5;" />
 ```
 
-##### &lt;body&gt;
+### &lt;body&gt;
 GOMLのbody要素は、1または複数のシーンが挿入されます。  
 **body** タグの直下には **scene** タグのみ配置可能です。
 
-###### &lt;scene&gt;
+#### &lt;scene&gt;
 シーンを定義します。  
 **body** タグ内に複数配置することが出来ます。
 
@@ -105,36 +105,36 @@ GOMLのbody要素は、1または複数のシーンが挿入されます。
 	<scene fog="#fcc 0.001"></scene>
 	````
 	
-###### &lt;camera&gt;
+#### &lt;camera&gt;
 カメラ
 
 
-###### &lt;light&gt;
+#### &lt;light&gt;
 光源
 
 
-###### &lt;mesh&gt;
+#### &lt;mesh&gt;
 メッシュオブジェクト
 
 ````html
 <mesh id="" geo="" mtl="" style=""></mesh>
 ````
 
-###### &lt;obj&gt;
+#### &lt;obj&gt;
 汎用オブジェクト
 
 ````html
 <obj id="" style=""></obj>
 ````
 
-###### &lt;sprite&gt;
+#### &lt;sprite&gt;
 spriteオブジェクト
 
 ````html
 <sprite id="" mtl="" style=""></sprite>
 ````
 
-###### &lt;mmd&gt;
+#### &lt;mmd&gt;
 MMDオブジェクト  
 MMDモデルを描画します。  
 **MMDプラグイン( libs/mmd/1.4/jThree.MMD.js )の読み込みが必要です。**  

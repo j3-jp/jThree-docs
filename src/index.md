@@ -1,6 +1,8 @@
-# jThree 2.1 doc (unofficial)
+% jThree 2.1 doc (unofficial)
 
 ## はじめに
+
+本文書はjThreeライブラリのリファレンスです。
 
 ## 用語・概念
 
@@ -17,4 +19,3 @@
 
 ### [プラグイン](plugins.html)
 
-## サンプル集
