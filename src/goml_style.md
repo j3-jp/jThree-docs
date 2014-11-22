@@ -154,57 +154,160 @@ lookAtZ: 10;
 #### ―表示― display  
 
 display: false;
-:    オブジェクトの表示・非表示をtrue/falseで指定できます。
+:    オブジェクトの表示・非表示をtrue/falseで指定できます。  
 
 #### ―材質― mtl*  
 
 ##### mtlColor  
+mtlColor: #f00;
+:    基本色をカラーコードか数値かRGB値(mtlColor: 255 0 0;)で指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlAmbient  
+mtlAmbient: #f00;
+:    環境光反射色をカラーコードか数値かRGB値(mtlAmbient: 255 0 0;)で指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlSpecular  
+mtlSpecular: #f00;
+:    鏡面反射光をカラーコードか数値かRGB値(mtlSpecular: 255 0 0;)で指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlShininess  
+mtlShininess: 10;
+:     鏡面反射光の強さを数値で指定できます。  
+      挿入先：mesh要素のstyle属性  
 
 ##### mtlMap  
+mtlMap: txr:first;
+:    テクスチャをCSSセレクタで指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlBumpScale  
+mtlBumpScale: 0.5;
+:    テクスチャの凹凸の深さを数値で指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlWireframe  
+mtlWireframe: true;
+:    ワイヤーフレームの表示をtrue/falseで指定できます。  
+     挿入先：mesh要素のstyle属性  
 
 ##### mtlBlending  
+mtlBlending: 1;
+:    透過処理を  
+     1:アルファブレンディング  
+     2:加算合成  
+     3:減算合成  
+     4:乗算合成  
+     で指定できます。  
+     挿入先：mesh要素のstyle属性  
 
+##### mtlSide  
+mtlSide: 2;
+:    ポリゴンの描画処理を  
+     0:表面のみ描画  
+     1:裏面のみ描画  
+     2:両面を描画  
+     で指定できます。  
+     挿入先：mesh要素のstyle属性
 
 #### ―ライト設定― light
 
 ##### lightColor  
+lightColor: #fff;
+:    ライトの色をカラーコードか数値かRGB値(lightColor: 255 255 255;)で指定できます。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。
 
 ##### lightIntensity  
+lightIntensity: 5;
+:    光の強さを0以上の数値で指定できます。  
+     type=\"Amb\"のライトには無効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### lightSky  
+lightSky: #0ff;
+:    空側の光源色をカラーコードか数値かRGB値(lightSky: 0 255 255;)で指定できます。  
+     type="Hem"のライトでのみ有効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### lightGround  
+lightGround: #0f0;
+:    地面側の光源色をカラーコードか数値かRGB値(lightGround: 0 255 0;)で指定できます。  
+     type="Hem"のライトでのみ有効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。
 
 ##### lightDistance  
+lightDistance: 5;
+:    光が届く距離を0以上の数値で指定できます。  
+     type="Poi"とtype="Spo"のライトでのみ有効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### lightAngle  
+lightAngle: 5;
+:    スポットライトが照らす範囲の中心角の半分をラジアンで指定できます。  
+     type="Spo"のライトでのみ有効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### lightExponent  
+lightExponent: 15;
+:    スポットライトの減衰係数を0以上の数値で指定できます。  
+     type="Spo"のライトでのみ有効です。  
+     挿入先：light要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。
 
 #### ―カメラ設定― camera
 
 ##### cameraNear
+cameraNear: 0;
+:    描画を始めるカメラからの距離を0以上の数値で指定できます。  
+     type="Ort"のカメラには無効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### cameraFar
+cameraFar: 10000;
+:    描画を終えるカメラからの距離をcameraNear以上の数値で指定できます。  
+     type="Ort"のカメラには無効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### cameraFov
+cameraFov: 45;
+:    カメラからの画角を度数で指定できます。  
+     type="Ort"のカメラには無効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### cameraAspect
+cameraAspect: 1.33;
+:    カメラのアスペクト比を0以上の数値で指定できます。  
+     指定すると自動計算されなくなるので通常は使いません。  
+     type="Ort"のカメラには無効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。
 
 ##### cameraWidth
+cameraWidth: 200;
+:    カメラの撮影範囲の横幅を0以上の数値で指定できます。  
+     cameraWidthだけを指定するとcameraHeightは自動計算されます。  
+     type="Ort"のカメラでのみ有効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 ##### cameraHeight
-
+cameraHeight: 200;
+:    カメラの撮影範囲の高さを0以上の数値で指定できます。  
+     cameraHeightだけを指定するとcameraWidthは自動計算されます。  
+     type="Ort"のカメラでのみ有効です。  
+     挿入先：camera要素のstyle属性  
+     ※v2.1よりキャメルケース表記に変わりました。  
 
 #### ―上方向指定― up
 
