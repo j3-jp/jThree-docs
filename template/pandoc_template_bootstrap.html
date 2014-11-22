@@ -72,7 +72,6 @@ $endfor$
 <div class="container-fluid">
   <div class="row">
 $if(toc)$
-    <!-- <div class="col-sm-3 col-md-2 bs-docs-sidebar sidebar" id="$idprefix$TOC">  -->
     <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm sidebar" role="complementary" id="$idprefix$TOC">
 $toc$
     </div><!-- /#TOC -->
@@ -110,7 +109,6 @@ $endfor$
 </div><!-- /.container-fluid -->
 
 <script type="text/javascript" src="assets/jquery/jquery-2.1.1.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     jQuery(function()
     {
@@ -118,6 +116,7 @@ $endfor$
         jQuery('#TOC').children('ul').addClass('bs-docs-sidenav');
     });
 </script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap-docs/docs.min.js"></script>
 </body>
 </html>
