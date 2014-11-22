@@ -34,9 +34,6 @@ $for(header-includes)$
 $endfor$
 </head>
 <body>
-$for(include-before)$
-$include-before$
-$endfor$
 $if(title)$
 <header>
 <h1 class="title">$title$</h1>
@@ -56,9 +53,51 @@ $if(toc)$
 $toc$
 </nav>
 $endif$
+
+<div id="content">
+$for(include-before)$
+$include-before$
+$endfor$
+<div id="document-body">
 $body$
+</div>
 $for(include-after)$
 $include-after$
 $endfor$
+</div>
 </body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    jQuery(function()
+    {
+        var nav = jQuery('#gmenu');
+        var offsetTop = nav.offset().top;
+
+        var nav = jQuery('#TOC');
+        if(nav.offset())
+        {
+            var navTop = nav.offset().top - 50;
+        }
+
+        var floatMenu = function() {
+            if (jQuery(window).scrollTop() > offsetTop) {
+                jQuery("header").addClass('fixed');
+                jQuery("#menu-home").css('display', 'none');
+                jQuery("#menu-zgn").css('display', 'inline-block');
+            } else {
+                jQuery("header").removeClass('fixed');
+                jQuery("#menu-home").css('display', 'inline-block');
+                jQuery("#menu-zgn").css('display', 'none');
+            }
+
+            if (nav.offset() && jQuery(window).scrollTop() > navTop) {
+                jQuery("#TOC").addClass('nav_fixed');
+            } else {
+                jQuery("#TOC").removeClass('nav_fixed');
+            }
+        }
+        jQuery(window).scroll(floatMenu);
+        jQuery('body').bind('touchmove', floatMenu);
+    });
+</script>
 </html>

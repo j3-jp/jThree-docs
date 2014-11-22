@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+
+html, body {
+    width: 100%;
+    min-width: 1024px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+img {
+    vertical-align: bottom;
+    border: none;
+}
+
+pre {
+    white-space: -moz-pre-wrap; /* Mozilla */
+    white-space: -pre-wrap;     /* Opera 4-6 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    white-space: pre-wrap;      /* CSS3 */
+    word-wrap: break-word;      /* IE 5.5+ */
+}
+
+/* ------------------------------
+　　　#wrapper
+------------------------------ */
+#wrapper {
+    width: 100%;
+    min-width: 1024px;
+    top: 0;
+    left: 0;
+
+}
+
+
+/* ------------------------------
+  utils
+------------------------------ */
+/* ----- clearfix ----- */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
